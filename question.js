@@ -1,7 +1,7 @@
 'use strict';
 class Question {
-  constructor (question) {
-    this.question = question;
+  constructor(content) {
+    this.content = content;
     this.save();
     //Question._All.push(this);
   }
@@ -16,7 +16,7 @@ class Question {
 
   static Find(id) {
     return this.All().find(function(id) {
-      return Question._All == id;
+      return Question.constructor == id;
     });
   }
 
