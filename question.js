@@ -3,7 +3,6 @@ class Question {
   constructor(content) {
     this.content = content;
     this.save();
-    //Question._All.push(this);
   }
 
   save() {
@@ -14,10 +13,16 @@ class Question {
     return this._All;
   }
 
+/*so what this is asking is that giving Find(number),
+we want to get the numbered item inside the Array
+and not to find something inside that matches the ID
   static Find(id) {
-    return this.All().find(function(id) {
-      return Question.constructor == id;
+    return this.All().find(function(ask) {
+      return ask.id == id;
     });
+  }*/
+  static Find(id){
+    return this.All()[id - 1];
   }
 
 }
