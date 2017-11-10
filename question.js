@@ -15,8 +15,8 @@ class Question {
   }
 
   static Find(ID) {
-    return this.All().find(function(id) {
-      return Question.constructor == ID;
+    return this.All().find(function(ask) {
+      return ask.constructor == ID;
     });
   }
 
