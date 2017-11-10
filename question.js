@@ -14,9 +14,9 @@ class Question {
     return this._All;
   }
 
-  static Find(ID) {
+  static Find(id) {
     return this.All().find(function(ask) {
-      return ask.ID == ID;
+      return ask.ID == id;
     });
   }
 
